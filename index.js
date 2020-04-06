@@ -48,6 +48,7 @@ const presidents = [
     { name: "Lyndon Johnson", terms: 2, party: "D" },
     { name: "Dwight Eisenhower", terms: 2, party: "R" }
   ];
+  
    
   //Challenge Questions
   //1) Filter all presidents, leaving only the Democratic ones
@@ -59,4 +60,15 @@ const presidents = [
   //4) log all dems who served 2 terms. HINT use chain filter, filter and slice
    
   //BONUS write a script to check if LBJ was a 2 term president. IF he was then alert("LBJ served two terms") else alert "LBJ was one and done"
-  presidents.forEach((el) => console.log(el));
+
+const democrats = presidents.filter(presidents => presidents.party === "D");
+console.log(democrats);
+
+const republicans = presidents.filter(presidents => presidents.party === "R")
+const oneTermRepublicans = republicans.filter(presidents => presidents.terms === 1)
+console.log(oneTermRepublicans)
+
+console.log(presidents.slice(0, 3))
+
+const twoTermDemocrats = democrats.filter(presidents => presidents.terms === 2)
+console.log(twoTermDemocrats)
